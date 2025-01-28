@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="copyright" content="Hak Cipta &copy; 2025 Rio Andriansyah. Semua hak dilindungi.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Rio Andriansyah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar a {
+            color: #ffffff;
+        }
+        .navbar a:hover, .navbar .nav-link.active {
+            background-color: #495057;
+            color: white !important;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        /* Hover effect pada gambar */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Modal fade-in animation */
+        .modal.fade .modal-dialog {
+            transform: translateY(-50%);
+            animation: modalFadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes modalFadeIn {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Gaya untuk gambar yang lebih besar di dalam modal */
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Biografi Rio Andriansyah</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Galeri Section -->
+    <div class="container mt-5">
+        <h2 class="text-primary text-center mb-4">Galeri Foto</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal">
+                <img src="image/1.jpg" class="img-fluid rounded shadow-sm" alt="Gunung Dempo
+                
+                adalah gunung berapi aktif yang terletak di Provinsi Sumatera Selatan, Indonesia. Dengan ketinggian sekitar 3.159 meter di atas permukaan laut, Gunung Dempo merupakan puncak tertinggi di Sumatera Selatan. Gunung ini memiliki daya tarik bagi para pendaki dan pecinta alam, menawarkan pemandangan yang menakjubkan serta jalur pendakian yang menantang. Di puncaknya, pendaki dapat menikmati panorama yang luas, termasuk pemandangan kota Pagar Alam dan sekitarnya. Selain itu, Gunung Dempo juga dikenal sebagai salah satu destinasi wisata alam yang menarik di kawasan Sumatera.">
+            </div>
+            <div class="col-md-4 mb-4 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal">
+                <img src="image/2.jpeg" class="img-fluid rounded shadow-sm" alt="Gunung Kerinci
+                
+                adalah gunung berapi aktif yang terletak di Provinsi Jambi, Sumatera, Indonesia. Dengan ketinggian 3.805 meter di atas permukaan laut, Gunung Kerinci adalah puncak tertinggi di Pulau Sumatera dan merupakan salah satu gunung berapi tertinggi di Indonesia. Gunung ini terkenal dengan keindahan alamnya, termasuk hutan tropis yang lebat, danau-danau vulkanik, serta flora dan fauna yang kaya. Pendakian ke puncak Gunung Kerinci menawarkan pemandangan spektakuler, dan para pendaki dapat menyaksikan kawah aktif di puncaknya. Gunung ini juga menjadi bagian dari Taman Nasional Kerinci Seblat yang merupakan kawasan konservasi penting di Sumatera.">
+            </div>
+            <div class="col-md-4 mb-4 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal">
+                <img src="image/3.jpeg" class="img-fluid rounded shadow-sm" alt="Gunung Merapi
+
+                adalah salah satu gunung berapi paling aktif di dunia, terletak di perbatasan antara provinsi Jawa Tengah dan Yogyakarta, Indonesia. Gunung ini terkenal karena erupsi-letusan yang sering terjadi, yang terakhir kali sangat signifikan pada tahun 2010. Merapi memiliki ketinggian sekitar 2.930 meter di atas permukaan laut dan merupakan salah satu ikon alam Indonesia. Kawasan sekitar gunung ini juga memiliki pemandangan yang memukau, menjadikannya destinasi populer bagi para pendaki dan wisatawan.">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2025 Rio Andriansyah. Semua hak dilindungi.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">Foto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Modal Foto" class="img-fluid mb-3">
+                    <p id="modalCaption"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS untuk Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script untuk menghandle modal -->
+    <script>
+        // Handle modal content
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const imgSrc = this.querySelector('img').getAttribute('src');
+                const altText = this.querySelector('img').getAttribute('alt');
+                document.getElementById('modalImage').setAttribute('src', imgSrc);
+                document.getElementById('modalCaption').innerText = altText;
+            });
+        });
+    </script>
+</body>
+</html>
